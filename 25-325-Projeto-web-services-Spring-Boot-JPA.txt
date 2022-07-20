@@ -147,6 +147,10 @@ http://www.h2database.com/html/advanced.html
 
 
 
+Anotation - @Transient  é para o compilardor ignorar, exemplo: 
+	@Transient
+	private Set<Product> products = new HashSet<>();
+
 
 
 	WAITING_PAYMENT(1),
