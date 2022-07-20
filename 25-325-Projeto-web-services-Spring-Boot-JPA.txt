@@ -30,7 +30,7 @@ $ git init
 Initialized empty Git repository in C:/temp/ws-sts/course/.git/
 
 Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (main)
-$ git
+$ git . 
 $ git config --global user.email "franciscoclira@hotmail.com"
 
 --> criar o projeto no github na web e depois de criar copia a linha abaixo para o git bash:  
@@ -51,14 +51,22 @@ Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (master)
 $ git init
 Reinitialized existing Git repository in C:/temp/ws-sts/course/.git/
 
+git remote add origin git@github.com:FranciscoCLira/course-springboot-2-java-11-A.git
+git push -u origin master
+
+
 $ git add . 
 $ git commit -m "Project created & User entity and resource"
 $ git push
 
-git remote add origin git@github.com:FranciscoCLira/course-springboot-2-java-11-A.git
-
 
 =========================================================
+Como apontar o projeto para outro repositório remoto
+git remote set-url origin git@github.com:seuusuario/seurepositorio.git
+git remote set-url origin git@github.com:FranciscoCLira/course-springboot-2-java-11-A.git
+
+
+
 Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (master)
 $ git push
 fatal: No configured push destination.
