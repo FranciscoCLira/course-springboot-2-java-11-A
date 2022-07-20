@@ -30,18 +30,59 @@ $ git init
 Initialized empty Git repository in C:/temp/ws-sts/course/.git/
 
 Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (main)
-$ git config --global user.name "Francisco Casemiro Lira"
+$ git
 $ git config --global user.email "franciscoclira@hotmail.com"
 
-Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (main)
-$
+--> criar o projeto no github na web e depois de criar copia a linha abaixo para o git bash:  
+$ git remote add origin git@github.com:FranciscoCLira/course-springboot-2-java-11.git
 
+Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (main)
 $ git add . 
 $ git commit -m "Project created"
+$ git push
 
---> criar o projeto no github na web e depois de criar copia a linha abaixo para o git bash:  
-    
-$ git remote add origin git@github.com:FranciscoCLira/course-springboot-2-java-11.git
+$ git remote add git@github.com:FranciscoCLira/course-springboot-2-java-11.git
+$ git commit -m "User entity and resource -versao-2"
+$ git push
+
+==============================================================================
+NOVO REPOSITORIO GIT: 
+Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (master)
+$ git init
+Reinitialized existing Git repository in C:/temp/ws-sts/course/.git/
+
+$ git add . 
+$ git commit -m "Project created & User entity and resource"
+$ git push
+
+git remote add origin git@github.com:FranciscoCLira/course-springboot-2-java-11-A.git
+
+
+=========================================================
+Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+    git remote add <name> <url>
+and then push using the remote name
+    git push <name>
+
+
+Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (master)
+$ git remote add git@github.com:FranciscoCLira/course-springboot-2-java-11.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+=========================================================
 
 
 
@@ -57,6 +98,11 @@ $ git commit -m "User entity and resource"
 $ git push
 
 
+Desfazer último commit sem desfazer as modificações nos arquivos:
+git status 
+git reset --soft HEAD~1
+
+
 Instalar banco de dados em memoria: 
 "H2 database, test profile, JPA" 
 
@@ -65,8 +111,6 @@ incluir as dependencias no arquivo pom.xml
 
 application-test.properties:
 spring.datasource.url=jdbc:h2:mem:testdb  ==>  mem = banco de dados criado em memoria 
-
-
 
 
 ===================
