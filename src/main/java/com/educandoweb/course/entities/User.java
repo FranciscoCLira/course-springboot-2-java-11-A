@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_user")
-public class Usuario implements Serializable {
+public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -25,12 +25,12 @@ public class Usuario implements Serializable {
 	private String password;
 
 	@OneToMany(mappedBy = "client")
-	private List<Oorder> orders = new ArrayList<>();
+	private List<Order> orders = new ArrayList<>();
 	
-	public Usuario() {
+	public User() {
 	}
 
-	public Usuario(Long id, String name, String email, String phone, String password) {
+	public User(Long id, String name, String email, String phone, String password) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -79,7 +79,7 @@ public class Usuario implements Serializable {
 		this.password = password;
 	}
 
-	public List<Oorder> getOrders() {
+	public List<Order> getOrders() {
 		return orders;
 	}
 
@@ -99,7 +99,7 @@ public class Usuario implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Usuario other = (Usuario) obj;
+		User other = (User) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

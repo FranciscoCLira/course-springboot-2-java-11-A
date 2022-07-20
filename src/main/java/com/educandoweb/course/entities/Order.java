@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_order")
-public class Oorder implements Serializable {
+public class Order implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -23,12 +23,12 @@ public class Oorder implements Serializable {
 
 	@ManyToOne
 	@JoinColumn(name = "client_id")
-	private Usuario client;
+	private User client;
 	
-	public Oorder() {
+	public Order() {
 	}
 
-	public Oorder(Long id, Instant moment, Usuario client) {
+	public Order(Long id, Instant moment, User client) {
 		super();
 		this.id = id;
 		this.moment = moment;
@@ -51,11 +51,11 @@ public class Oorder implements Serializable {
 		this.moment = moment;
 	}
 
-	public Usuario getClient() {
+	public User getClient() {
 		return client;
 	}
 
-	public void setClient(Usuario client) {
+	public void setClient(User client) {
 		this.client = client;
 	}
 
@@ -75,7 +75,7 @@ public class Oorder implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Oorder other = (Oorder) obj;
+		Order other = (Order) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
