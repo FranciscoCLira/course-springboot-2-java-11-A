@@ -144,3 +144,13 @@ git push -u origin master
 
 Reserved words
 http://www.h2database.com/html/advanced.html
+
+
+
+
+
+	WAITING_PAYMENT(1),
+	PAID(2),
+	SHIPPED(3),
+	DELIVERED(4),
+	CANCELED(5);
