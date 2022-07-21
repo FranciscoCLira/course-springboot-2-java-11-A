@@ -151,15 +151,19 @@ Anotation - @Transient  é para o compilardor ignorar, exemplo:
 	@Transient
 	private Set<Product> products = new HashSet<>();
 
-
-
-	WAITING_PAYMENT(1),
-	PAID(2),
-	SHIPPED(3),
-	DELIVERED(4),
-	CANCELED(5);
-    
-    
     
 https://www.udemy.com/course/java-curso-completo/learn/lecture/15989010#search
+
+
+Segue o link da live: OO e List em Java - Aulão #003
+https://youtu.be/Xj-osdBe3TE
+
+
+grupo no Discord, lá tem outros alunos e vocês podem trocar conhecimentos:
+https://discord.gg/SbjpsFv
+
+
+Para mais informações sobre esse tipo de problema, sempre lembrem de consultar o bom e velho Stackoverflow:
+https://stackoverflow.com/questions/47457105/class-has-been-compiled-by-a-more-recent-version-of-the-java-environment
+
 
