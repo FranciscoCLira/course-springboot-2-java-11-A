@@ -158,3 +158,8 @@ Anotation - @Transient  é para o compilardor ignorar, exemplo:
 	SHIPPED(3),
 	DELIVERED(4),
 	CANCELED(5);
+    
+    
+    
+https://www.udemy.com/course/java-curso-completo/learn/lecture/15989010#search
+
