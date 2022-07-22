@@ -167,3 +167,26 @@ Para mais informações sobre esse tipo de problema, sempre lembrem de consultar o
 https://stackoverflow.com/questions/47457105/class-has-been-compiled-by-a-more-recent-version-of-the-java-environment
 
 
+============================================================
+
+
+Teste:    Postman: PUT  http://localhost:8080/users/7 -  alterar um user inexistente. 
+
+Exception handling - update
+Checklist:
+    UserService
+    EntityNotFoundException
+
+UserService class  -  
+...
+	public User update(Long id, User obj) {
+		try {
+			User entity = repository.getOne(id);
+			updateData(entity, obj);
+		ç	return repository.save(entity);
+		} catch (RuntimeException e) {
+			e.printStackTrace();           ===>  incluido apenas para teste, capturar a exception class: EntityNotFoundException
+			throw new ResourceNotFoundException(id);
+		}
+
+============================================================
