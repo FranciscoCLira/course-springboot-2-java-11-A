@@ -211,3 +211,68 @@ Aula: Install local PostgreSQL
  spring.profiles.active=test   ==> alterar de test para dev
 
 spring.jpa.open-in-view=true
+
+=====
+
+
+
+Backup pgAdmin 
+
+
+C:\Users\Samsung\pg_dump.exe
+
+C:\Program Files\PostgreSQL\14\bin
+C:\Program Files\PostgreSQL\14\bin\pg_dump.exe
+
+C:\Users\Samsung\
+
+Criado arquivo script de backup pelo pgAdmim => backup 
+
+C:\temp\script.sql
+
+
+https://dashboard.heroku.com/apps/course-javasb-flira/settings 
+
+Config vars:
+                           senha - vide site
+postgres://zijqfgsuwccvfi:(8d2f36af96807e9.......763b92b0a6a41d50fff5b85)@ec2-107-22-122-106.compute-1.amazonaws.com:5432/d14sg92a7d4to
+
+destrinchando: 
+
+User: zijqfgsuwccvfi
+
+password: (vide site)
+
+server: ec2-107-22-122-106.compute-1.amazonaws.com
+
+port: 5432
+
+database: d14sg92a7d4to
+
+
+==================================================================
+
+Deploy no Heroku 
+
+copiar de https://dashboard.heroku.com/apps/course-javasb-flira/deploy/heroku-git
+    create a new git repository: 
+      heroku git:remote -a course-javasb-flira
+
+Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (master)
+$ heroku git:remote -a course-javasb-flira
+set git remote heroku to https://git.heroku.com/course-javasb-flira.git
+
+Para testar se funcionou:
+
+Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (master)
+$ git remote -v
+heroku  https://git.heroku.com/course-javasb-flira.git (fetch)
+heroku  https://git.heroku.com/course-javasb-flira.git (push)
+origin  git@github.com:FranciscoCLira/course-springboot-2-java-11-A.git (fetch)
+origin  git@github.com:FranciscoCLira/course-springboot-2-java-11-A.git (push)
+
+
+Na classe aplication.properties 
+spring.profiles.active=dev  ==> alterar de dev para prod
+
+Agora fazer git para hiroku  
