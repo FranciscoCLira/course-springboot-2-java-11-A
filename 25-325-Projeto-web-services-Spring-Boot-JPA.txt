@@ -276,3 +276,129 @@ Na classe aplication.properties
 spring.profiles.active=dev  ==> alterar de dev para prod
 
 Agora fazer git para hiroku  
+
+
+https://course-javasb-flira.herokuapp.com/  - aplicação minha 
+
+
+Verificando o erro de deploy: 
+https://mkyong.com/maven/maven-error-invalid-target-release-17/
+
+
+Find out the Java version in Maven
+The Maven may be using a different Java version to compile the project, and we can use mvn -version to find out the Maven details.
+     mvn -version   no terminal do sts 
+
+C:\temp\ws-sts\course>java -version
+openjdk version "17.0.3" 2022-04-19 
+ 
+Try print out the JAVA_HOME environment variable; Maven finds JAVA_HOME for Java to compile.
+no Terminal: 
+echo $JAVA_HOME
+
+Updating the JAVA_HOME environment variable and ensuring it points to the correct JDK
+
+Alterar de:
+Nome  da variavel: JAVA_HOME 
+Valor da variavel: C:\Program Files\Java\jdk-18.0.1.1
+
+para: 
+Valor da variavel: C:\Program Files\Java\jdk-17.0.3
+
+voltar para: 
+Valor da variavel: C:\Program Files\Java\jdk-18.0.1.1
+ 
+==================================================================================================
+
+Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (master)
+$ git push heroku master
+Enumerating objects: 335, done.
+Counting objects: 100% (335/335), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (249/249), done.
+Writing objects: 100% (335/335), 91.24 KiB | 2.47 MiB/s, done.
+Total 335 (delta 125), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Building on the Heroku-22 stack
+remote: -----> Determining which buildpack to use for this app
+remote: -----> Java app detected
+remote: -----> Installing OpenJDK 1.8... done
+remote: -----> Executing Maven
+remote:        $ ./mvnw -DskipTests clean dependency:list install
+remote:        [INFO] Scanning for projects...
+remote:        [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/2.7.1/spring-boot-starter-parent-2.7.1.pom
+...
+...
+remote:        [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.11.1/plexus-compiler-api-2.11.1.jar (27 kB at 1.2 MB/s
+remote:        [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.11.1/plexus-compiler-javac-2.11.1.jar (23 kB at 1.1 MB/s)
+remote:        [INFO] Changes detected - recompiling the module!
+remote:        [INFO] Compiling 27 source files to /tmp/build_75620d9b/target/classes
+remote:        [INFO] ------------------------------------------------------------------------
+remote:        [INFO] BUILD FAILURE
+remote:        [INFO] ------------------------------------------------------------------------
+remote:        [INFO] Total time:  9.494 s
+remote:        [INFO] Finished at: 2022-07-22T22:42:29Z
+remote:        [INFO] ------------------------------------------------------------------------
+remote:        [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile (default-compile) on project course: Fatal error compiling: invalid target release: 17 -> [Help 1]
+remote:        [ERROR]
+remote:        [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+remote:        [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+remote:        [ERROR]
+remote:        [ERROR] For more information about the errors and possible solutions, please read the following articles:
+remote:        [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+remote:
+remote:  !     ERROR: Failed to build app with Maven
+remote:        We're sorry this build is failing! If you can't find the issue in application code,
+remote:        please submit a ticket so we can help: https://help.heroku.com/
+remote:
+remote:  !     Push rejected, failed to compile Java app.
+remote:
+remote:  !     Push failed
+remote: Verifying deploy...
+remote:
+remote: !       Push rejected to course-javasb-flira.
+remote:
+To https://git.heroku.com/course-javasb-flira.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/course-javasb-flira.git'
+
+Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (master)
+$
+
+=============================================================
+remote:        [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.11.1/plexus-compiler-manager-2.11.1.jar (4.7 kB at 291 kB/s)
+remote:        [INFO] Changes detected - recompiling the module!
+remote:        [INFO] Compiling 27 source files to /tmp/build_87d2ba81/target/classes
+remote:        [INFO] ------------------------------------------------------------------------
+remote:        [INFO] BUILD FAILURE
+remote:        [INFO] ------------------------------------------------------------------------
+remote:        [INFO] Total time:  7.535 s
+remote:        [INFO] Finished at: 2022-07-22T23:29:48Z
+remote:        [INFO] ------------------------------------------------------------------------
+remote:        [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile (default-compile) on project course: Fatal error compiling: invalid target release: 17 -> [Help 1]
+remote:        [ERROR]
+remote:        [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+remote:        [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+remote:        [ERROR]
+remote:        [ERROR] For more information about the errors and possible solutions, please read the following articles:
+remote:        [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+remote:
+remote:  !     ERROR: Failed to build app with Maven
+remote:        We're sorry this build is failing! If you can't find the issue in application code,
+remote:        please submit a ticket so we can help: https://help.heroku.com/
+remote:
+remote:  !     Push rejected, failed to compile Java app.
+remote:
+remote:  !     Push failed
+remote: Verifying deploy...
+remote:
+remote: !       Push rejected to course-javasb-flira.
+remote:
+To https://git.heroku.com/course-javasb-flira.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/course-javasb-flira.git'
+
+Samsung@LAPTOP-9P7FQEU6 MINGW64 /c/temp/ws-sts/course (master)
+$
