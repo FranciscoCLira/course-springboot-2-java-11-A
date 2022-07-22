@@ -190,3 +190,24 @@ UserService class  -
 		}
 
 ============================================================
+
+"Create Heroku app  & provision PostgreSQL   (course-javasb-flira)"
+==========================================
+
+Cloud Application Platform
+
+Aula: Install local PostgreSQL 
+: https://www.postgresql.org/download/
+ 
+ Super user: postgres
+ Password: vide material de apoio
+ Port: 5432 
+ 
+ 
+ Dev profile: 
+ ===========
+ Arquivo 
+ aplication.properties 
+ spring.profiles.active=test   ==> alterar de test para dev
+
+spring.jpa.open-in-view=true
