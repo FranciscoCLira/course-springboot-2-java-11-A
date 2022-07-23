@@ -318,6 +318,29 @@ OpenJDK Runtime Environment Temurin-17.0.3
 maven-compiler-plugin:3.10.1:compile (default-compile)   era 
    Alterado de: <modelVersion>4.0.0</modelVersion>
           para: <modelVersion>3.10.1</modelVersion> 
+
+--- maven-compiler-plugin:3.10.1:compile (default-compile) @
+
+ Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile (default-compile) on project course: Fatal error compiling: invalid target release: 17 -> [Help 1]
+
+https://github.com/castorini/anserini/issues/748  
+
+https://stackoverflow.com/questions/61243459/failed-to-execute-goal-org-apache-maven-pluginsmaven-compiler-plugin3-8-1comp
+
+
+Incluido: pom
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version>
+				<configuration>
+					<source>1.11</source>
+					<target>1.11</target>
+				</configuration>
+			</plugin>
+
+
  
 ==================================================================================================
 
