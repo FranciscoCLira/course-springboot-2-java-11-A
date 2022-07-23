@@ -313,6 +313,11 @@ set JAVA_HOME='C:\Program Files\Java\jdk-18.0.1.1'
 
 set JAVA_HOME='C:\Program Files\Java\jdk-17.0.3'
 
+OpenJDK Runtime Environment Temurin-17.0.3
+ 
+maven-compiler-plugin:3.10.1:compile (default-compile)   era 
+   Alterado de: <modelVersion>4.0.0</modelVersion>
+          para: <modelVersion>3.10.1</modelVersion> 
  
 ==================================================================================================
 
